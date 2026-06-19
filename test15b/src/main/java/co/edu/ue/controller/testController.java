@@ -27,6 +27,11 @@ public class testController {
 	public String testCi() {
 		return "Esto es una prueba para testear la integracion continua";
 	}
+
+	@GetMapping(value="/ola")
+	public String ola() {
+		return "ola mundito";
+	}
 	
 	@GetMapping(value="/sumar")
     public int sumar(
