@@ -12,6 +12,7 @@ services:
 
   backend:
     build: ./test15b
+    image: ivandavidsierracudriz/backend-springboot-15a:latest
     container_name: backend-springboot
     ports:
       - "8090:8080"
