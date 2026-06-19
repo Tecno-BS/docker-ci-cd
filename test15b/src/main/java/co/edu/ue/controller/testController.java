@@ -22,6 +22,11 @@ public class testController {
 	public String hello() {
 		return "Hola estudiantes de la 15B";
 	}
+
+	@GetMapping(value="/test_ci")
+	public String testCi() {
+		return "Esto es una prueba para testear la integracion continua";
+	}
 	
 	@GetMapping(value="/sumar")
     public int sumar(
