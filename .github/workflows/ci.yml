@@ -44,9 +44,9 @@ jobs:
     steps:
       - name: Actualizar contenedor backend
         run: |
-          cd C:\Users\ivan\Documents\Uniempresarial\Despliegues Continuos\docker-ci-cd
+          cd "C:\Users\ivan\Documents\Uniempresarial\Despliegues Continuos\docker-ci-cd"
           docker compose pull backend
           docker compose up -d backend
-          
+
 
 
