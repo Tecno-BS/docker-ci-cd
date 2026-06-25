@@ -40,9 +40,6 @@ jobs:
 
   build-frontend:
     runs-on: ubuntu-latest
-    env:
-      # TODO: Reemplaza con tu imagen de DockerHub, ejemplo: ivandavidsierracudriz/frontend-html:latest
-      FRONTEND_IMAGE: ivandavidsierracudriz/frontend_test:latest
     defaults:
       run:
         working-directory: frontend_test
@@ -57,10 +54,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Construir imagen Docker frontend
-        run: docker build -t ${{ env.FRONTEND_IMAGE }} .
+        run: docker build -t ivandavidsierracudriz/frontend_test:latest .
 
       - name: Publicar imagen frontend en DockerHub
-        run: docker push ${{ env.FRONTEND_IMAGE }}
+        run: docker push ivandavidsierracudriz/frontend_test:latest
 
   deploy-backend:
     needs: build-backend
