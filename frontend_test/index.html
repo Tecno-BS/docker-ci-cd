@@ -22,11 +22,27 @@
     <button onclick="listar()">Consultar /lista</button>
     <ul id="listaDatos"></ul>
 
+    <h2>ola munditos</h2>
+    <button onclick="ola()">Consultar /ola</button>
+    <p id="resultadoOla"></p>
+
     <script>
         const API_URL = "http://localhost:8090";
 
         function saludar() {
             fetch(`${API_URL}/saludar`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("resultadoOla").innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById("resultadoOla").innerText = "Error al consumir /ola";
+                    console.error(error);
+                });
+        }
+
+        function ola() {
+            fetch(`${API_URL}/ola`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("resultadoSaludo").innerText = data;
