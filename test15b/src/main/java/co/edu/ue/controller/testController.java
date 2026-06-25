@@ -38,7 +38,7 @@ public class testController {
 	@GetMapping(value="/sumar")
     public int sumar(
             @RequestParam int numero1,
-            @RequestParam int numero2
+            @RequestParam int numero2,
 			@RequestParam int numero3) {
 
         return numero1 + numero2 + numero3;
