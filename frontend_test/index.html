@@ -7,6 +7,7 @@
 <body>
 
     <h1>Consumo API Spring Boot</h1>
+    
 
     <h2>Saludar</h2>
     <button onclick="saludar()">Probar /saludar</button>
@@ -15,6 +16,7 @@
     <h2>Sumar dos números</h2>
     <input type="number" id="numero1" placeholder="Número 1">
     <input type="number" id="numero2" placeholder="Número 2">
+    <input type="number" id="numero3" placeholder="Número 3">
     <button onclick="sumar()">Sumar</button>
     <p id="resultadoSuma"></p>
 
@@ -36,10 +38,11 @@
                     document.getElementById("resultadoSaludo").innerText = data;
                 })
                 .catch(error => {
-                    document.getElementById("resultadoSaludo").innerText = "Error al consumir /ola";
+                    document.getElementById("resultadoSaludo").innerText = "Error al consumir /saludar";
                     console.error(error);
                 });
         }
+        
 
         function ola() {
             fetch(`${API_URL}/ola`)
@@ -48,7 +51,7 @@
                     document.getElementById("resultadoOla").innerText = data;
                 })
                 .catch(error => {
-                    document.getElementById("resultadoOla").innerText = "Error al consumir /saludar";
+                    document.getElementById("resultadoOla").innerText = "Error al consumir /hola";
                     console.error(error);
                 });
         }
