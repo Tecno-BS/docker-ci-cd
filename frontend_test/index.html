@@ -33,10 +33,10 @@
             fetch(`${API_URL}/saludar`)
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("resultadoOla").innerText = data;
+                    document.getElementById("resultadoSaludo").innerText = data;
                 })
                 .catch(error => {
-                    document.getElementById("resultadoOla").innerText = "Error al consumir /ola";
+                    document.getElementById("resultadoSaludo").innerText = "Error al consumir /ola";
                     console.error(error);
                 });
         }
@@ -45,10 +45,10 @@
             fetch(`${API_URL}/ola`)
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("resultadoSaludo").innerText = data;
+                    document.getElementById("resultadoOla").innerText = data;
                 })
                 .catch(error => {
-                    document.getElementById("resultadoSaludo").innerText = "Error al consumir /saludar";
+                    document.getElementById("resultadoOla").innerText = "Error al consumir /saludar";
                     console.error(error);
                 });
         }
