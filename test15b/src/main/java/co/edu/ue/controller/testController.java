@@ -30,7 +30,7 @@ public class testController {
 
 	@GetMapping(value="/ola")
 	public String ola() {
-		return "ola mundito";
+		return "hola mundito";
 	}
 	
 	@GetMapping(value="/sumar")
