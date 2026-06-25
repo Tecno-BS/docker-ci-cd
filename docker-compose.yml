@@ -26,6 +26,8 @@ services:
 
   frontend:
     build: ./frontend_test
+    # TODO: Reemplaza con tu imagen de DockerHub, ejemplo: ivandavidsierracudriz/frontend-html:latest
+    image: ivandavidsierracudriz/frontend_test:latest
     container_name: frontend-html
     ports:
       - "8081:80"
